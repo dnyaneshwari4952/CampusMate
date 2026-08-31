@@ -29,6 +29,17 @@ st.markdown(
         font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     
+    /* Hide Streamlit header, top toolbar (Share, edit, github, menu), and footer */
+    #MainMenu {visibility: hidden; display: none !important;}
+    header {visibility: hidden; display: none !important;}
+    footer {visibility: hidden; display: none !important;}
+    [data-testid="stHeader"] {display: none !important;}
+    [data-testid="stToolbar"] {display: none !important;}
+    .stDeployButton {display: none !important;}
+    [data-testid="stDecoration"] {display: none !important;}
+    [data-testid="stStatusWidget"] {display: none !important;}
+    .stActionButton {display: none !important;}
+    
     /* Background gradients */
     .stApp {
         background: linear-gradient(135deg, #090d16 0%, #0f172a 50%, #1e1b4b 100%);
