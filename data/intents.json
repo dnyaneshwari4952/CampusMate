@@ -1,0 +1,731 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hello",
+        "hi",
+        "hey",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "hey there",
+        "hello there",
+        "greetings",
+        "howdy",
+        "hi campusmate",
+        "hello assistant",
+        "hey assistant",
+        "hi there",
+        "is anyone available",
+        "hello bot",
+        "hi bot",
+        "start chat",
+        "heyy",
+        "hellooo",
+        "hi there bot",
+        "hey campusmate",
+        "good day",
+        "welcome",
+        "hi good day",
+        "hello there assistant"
+      ],
+      "responses": [
+        "Hello! Welcome to CampusMate, your university FAQ assistant. How can I help you today?",
+        "Hi there! I am CampusMate. Feel free to ask me about courses, fees, admission, hostel, library, placements, or campus facilities.",
+        "Greetings! How may I assist you with university information today?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "bye bye",
+        "see you later",
+        "see you",
+        "cya",
+        "have a good day",
+        "talk to you later",
+        "ttyl",
+        "farewell",
+        "bye campusmate",
+        "i am leaving",
+        "catch you later",
+        "good night",
+        "got to go",
+        "gtg",
+        "bye for now",
+        "exit",
+        "quit",
+        "thanks bye",
+        "thank you goodbye",
+        "see ya",
+        "signing off"
+      ],
+      "responses": [
+        "Goodbye! Have a wonderful day, and feel free to return if you need more information.",
+        "Thank you for using CampusMate! Best of luck with your academic journey.",
+        "See you later! Don't hesitate to reach out if you have further university questions."
+      ]
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "what is your name",
+        "who are you",
+        "what are you called",
+        "tell me your name",
+        "do you have a name",
+        "what should i call you",
+        "what is this bot called",
+        "identify yourself",
+        "what are you",
+        "whats your name",
+        "who am i chatting with",
+        "who is this",
+        "your name please",
+        "what is this application",
+        "are you campusmate",
+        "introduce yourself",
+        "can you introduce yourself",
+        "who is talking",
+        "who are u",
+        "ur name"
+      ],
+      "responses": [
+        "I am CampusMate, your dedicated University FAQ & Intent Assistant.",
+        "You are chatting with CampusMate, an AI-assisted FAQ system designed to answer your campus and academic queries.",
+        "My name is CampusMate! I'm here to provide factual, verified information about university admissions, programs, and facilities."
+      ]
+    },
+    {
+      "tag": "creator",
+      "patterns": [
+        "who made you",
+        "who created you",
+        "who built you",
+        "who is your developer",
+        "who developed campusmate",
+        "who programmed you",
+        "who designed this chatbot",
+        "who is your author",
+        "tell me about your creator",
+        "who built campusmate",
+        "who created campusmate assistant",
+        "who is the author of this project",
+        "who developed this app",
+        "who coded you",
+        "who is behind campusmate"
+      ],
+      "responses": [
+        "CampusMate was developed as an NLP intent classification project using TF-IDF and Logistic Regression.",
+        "I was created by developers using classical NLP machine learning techniques to assist university students and staff.",
+        "CampusMate was engineered to deliver fast, rule-based, and intent-matched university answers without external generative AI dependencies."
+      ]
+    },
+    {
+      "tag": "courses",
+      "patterns": [
+        "courses",
+        "what courses are offered",
+        "which programs are available",
+        "what can i study here",
+        "which branches are offered",
+        "list of courses",
+        "what degree programs does the university offer",
+        "what subjects can i study",
+        "which engineering programs are available",
+        "what departments are there",
+        "what majors do you offer",
+        "available branches in engineering",
+        "what degrees can i get",
+        "tell me about the courses",
+        "course list",
+        "programs offered",
+        "undergraduate courses",
+        "postgraduate programs",
+        "wich courses are offered",
+        "which courses r offered",
+        "what programs r available",
+        "tell me available courses",
+        "courses available",
+        "what academic programs are offered",
+        "which degrees are available",
+        "what branches do you have",
+        "what branches are available",
+        "what programs can i take",
+        "which engineering branches do you offer",
+        "i am interested in knowing what engineering branches your university currently provides",
+        "what branches do u have",
+        "which branches can i choose",
+        "list of academic programs",
+        "btech programs available",
+        "what degree options can students select from",
+        "which academic branches can i enroll in"
+      ],
+      "responses": [
+        "The university offers undergraduate and postgraduate programs across engineering, science, business, and humanities, including Computer Science, Information Technology, Electronics, Mechanical, and Civil Engineering.",
+        "Available academic programs include B.Tech, M.Tech, BCA, MCA, B.Sc, and MBA across diverse specializations. Check the academic brochure for full branch listings.",
+        "Our institution provides accredited degree programs in engineering disciplines, management, and computer applications."
+      ]
+    },
+    {
+      "tag": "course_details",
+      "patterns": [
+        "course details",
+        "tell me about computer engineering",
+        "is programming taught in computer engineering",
+        "what subjects are included in the curriculum",
+        "computer science syllabus",
+        "what will i learn in computer engineering",
+        "does the university offer coding courses",
+        "what programming subjects are taught",
+        "is coding part of the computer science curriculum",
+        "tell me about the IT course",
+        "curriculum details",
+        "what subjects are in the first year",
+        "tell me course detals",
+        "engineering syllabus details",
+        "is software engineering taught here",
+        "what topics are covered in computer science",
+        "data structures and algorithms in course",
+        "is programming included in the syllabus",
+        "computer engineering subjects",
+        "details of computer science program",
+        "does cse teach python",
+        "does computer science teach python",
+        "what do they teach in computer engineering",
+        "is python taught in computer engineering",
+        "what programming languages are taught in computer engineering",
+        "what programming subjects are included in the curriculum",
+        "computer engineering curriculum details"
+      ],
+      "responses": [
+        "Computer Engineering and IT curricula cover core subjects including Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Computer Networks, and Software Engineering.",
+        "Yes, programming languages such as Python, Java, and C++ along with foundational computer science concepts are integral parts of the engineering syllabus.",
+        "Detailed subject lists and semester-wise syllabi are published in the official university curriculum document for each department."
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "fees",
+        "what is the fee structure",
+        "how much are the fees",
+        "what is the annual fee",
+        "college fees",
+        "tuition fee details",
+        "how much does it cost to study here",
+        "semester fees",
+        "what is the fee for engineering",
+        "fee payment schedule",
+        "how to pay fees",
+        "annual tuition cost",
+        "cost of admission",
+        "what is the annual fess",
+        "wich fee structure",
+        "how much is the tuition",
+        "tuition costs per term",
+        "payment mode for fees",
+        "fee installment details",
+        "breakup of college fees",
+        "fess details",
+        "how much fee do i have to pay",
+        "can u tell me fee",
+        "how much do i need to pay yearly",
+        "i want to know the amount i would be paying every academic year",
+        "what is the amount to pay every academic year",
+        "yearly tuition payment",
+        "how much to pay yearly",
+        "annual college fee amount",
+        "what is the payment amount per academic session"
+      ],
+      "responses": [
+        "The fee structure varies by program and academic year. General tuition fees are payable per semester through the university's online payment portal or bank draft.",
+        "Detailed fee schedules, including tuition, examination, and laboratory charges, are available on the university's official fee portal and admission brochure.",
+        "For exact fee breakdowns and installment options, please consult the university accounts section or the official finance circular."
+      ]
+    },
+    {
+      "tag": "admission",
+      "patterns": [
+        "admission",
+        "what is the admission process",
+        "how to apply for admission",
+        "how can i get admission",
+        "admission procedure",
+        "admission eligibility criteria",
+        "when does admission start",
+        "how to enroll in university",
+        "application form for admission",
+        "what are the requirements for admission",
+        "is admission open",
+        "what is addmission process",
+        "admision process",
+        "how to join the college",
+        "where can i find information about admission",
+        "admission guidelines",
+        "eligibility for btech admission",
+        "steps to apply for admission",
+        "online admission application",
+        "how do i enroll in a program",
+        "what is needed for admission",
+        "what is required to get admission",
+        "admission requirements and eligibility",
+        "how to apply for btech admission",
+        "enrollment steps for college",
+        "what is the procedure to submit my enrollment application",
+        "how to submit enrollment application"
+      ],
+      "responses": [
+        "Admissions are conducted through merit lists and entrance test scores. Candidates must submit an online application on the official university portal during the admission window.",
+        "To apply for admission, register on the university website, fill out the application form, upload relevant academic records, and participate in counseling.",
+        "Admission eligibility requires passing qualifying examinations (e.g., 10+2 for undergraduate programs) with the minimum required percentage specified in the admission notification."
+      ]
+    },
+    {
+      "tag": "documents",
+      "patterns": [
+        "documents",
+        "what documents are required",
+        "what documents are needed for admission",
+        "document verification list",
+        "which certificates do i need",
+        "documents for admission",
+        "certificates needed for enrollment",
+        "what certificates must be verified for enrollment",
+        "required documents for registration",
+        "what paperwork is required",
+        "documants for admision",
+        "list of certificates required",
+        "do i need transfer certificate",
+        "marksheet requirements",
+        "identity proof for admission",
+        "what papers to submit during admission",
+        "enrollment document checklist",
+        "which documents are required for enrollment",
+        "verification documents list",
+        "documents to carry for admission",
+        "what docs do i need",
+        "before applying which documents should i keep ready",
+        "which documents should i keep ready before applying",
+        "what certificates to keep ready for admission",
+        "what docs are required for enrollment"
+      ],
+      "responses": [
+        "Required documents for admission include 10th and 12th marksheets, transfer certificate, migration certificate, caste certificate (if applicable), passport photos, and government ID proof.",
+        "During document verification, please bring original and photocopies of academic transcripts, entrance scorecards, identification proofs, and address proofs.",
+        "A complete document verification checklist is provided in the admission prospectus on the university portal."
+      ]
+    },
+    {
+      "tag": "hours",
+      "patterns": [
+        "hours",
+        "what are the college hours",
+        "what are the college timings",
+        "university working hours",
+        "what time does college open",
+        "what time does college close",
+        "working days and hours",
+        "when is the administrative office open",
+        "office timings",
+        "college timetable hours",
+        "when does class start",
+        "daily schedule of college",
+        "opening hours",
+        "closing hours",
+        "campus working time",
+        "is college open on saturday",
+        "working hours of the university",
+        "operating hours",
+        "when does college open",
+        "college timing",
+        "what are college operating timings",
+        "campus schedule and hours"
+      ],
+      "responses": [
+        "The university academic departments operate from 9:00 AM to 5:00 PM, Monday through Friday.",
+        "Administrative offices are open Monday to Friday from 9:30 AM to 4:30 PM, with alternate working Saturdays.",
+        "Regular classroom lectures are scheduled between 9:00 AM and 4:30 PM according to departmental timetables."
+      ]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "location",
+        "where is the university",
+        "where is the university located",
+        "what is the campus address",
+        "how to reach the university",
+        "directions to campus",
+        "where can i find the campus directions",
+        "univercity location",
+        "campus location and address",
+        "where is the college situated",
+        "how do i get to the university",
+        "nearest railway station to university",
+        "nearest bus stop to campus",
+        "university pin code and city",
+        "location details",
+        "address of the college",
+        "where is the main campus",
+        "where exactly is the college",
+        "how can i reach the university",
+        "how do i reach the campus",
+        "campus address and transit directions"
+      ],
+      "responses": [
+        "The university campus is located in the academic institutional area, easily accessible by public transit, suburban rail, and major city bus routes.",
+        "You can find exact driving directions and campus map navigation on the contact page of the official university website.",
+        "For complete address details and transportation assistance, please refer to the location section on our official portal."
+      ]
+    },
+    {
+      "tag": "hostel",
+      "patterns": [
+        "hostel",
+        "is hostel available",
+        "do you have hostel facilities",
+        "hostel accommodation",
+        "is there a hostel for boys",
+        "is there a hostel for girls",
+        "do you provide lodging for outstation students",
+        "is hostel avalable",
+        "student residence facilities",
+        "hostel admission",
+        "can i get a room in hostel",
+        "accommodation for students",
+        "tell me about the hostel",
+        "is on-campus housing available",
+        "hostel availability for freshers",
+        "dormitory facilities",
+        "hostel for students",
+        "lodging facilities",
+        "does this college have hostel",
+        "hostel available",
+        "suppose i want hostel accommodation what options do students have",
+        "hostel options for outstation students",
+        "is student housing provided",
+        "do you offer dormitory accommodations for learners",
+        "dormitory accommodations for students"
+      ],
+      "responses": [
+        "Yes, the university provides separate on-campus hostel accommodation for both male and female students with 24/7 security.",
+        "Hostel rooms are allotted on a first-come, first-served basis during the academic admission process.",
+        "Outstation students can apply for hostel accommodation through the student housing portal after securing academic admission."
+      ]
+    },
+    {
+      "tag": "hostel_facilities",
+      "patterns": [
+        "hostel facilities",
+        "what facilities are available in the hostel",
+        "what amenities are in the hostel",
+        "is there wifi in the hostel",
+        "is food provided in hostel mess",
+        "hostel mess and room facilities",
+        "hostel rules and amenities",
+        "what does the hostel provide",
+        "is there laundry in the hostel",
+        "hostel room furniture and water facility",
+        "hostel sports and recreation",
+        "amenities in student residence",
+        "facilities in boys hostel",
+        "facilities in girls hostel",
+        "hostel dining and mess facilities",
+        "what amenities are provided in the dormitory",
+        "hostel mess and wifi details"
+      ],
+      "responses": [
+        "Hostel facilities include furnished rooms, Wi-Fi internet connectivity, nutritious mess dining, drinking water purifiers, laundry areas, and recreation lounges.",
+        "The student residences feature 24-hour power backup, clean dining halls, study rooms, and dedicated medical first-aid support.",
+        "For complete hostel guidelines, mess menus, and room layout descriptions, consult the student housing manual."
+      ]
+    },
+    {
+      "tag": "library",
+      "patterns": [
+        "library",
+        "is there a library",
+        "does the university have a library",
+        "tell me about the library",
+        "central library facilities",
+        "how many books in the library",
+        "are digital journals available in library",
+        "can students borrow books from library",
+        "where is the libry",
+        "libary facilities",
+        "library services and catalog",
+        "e-library and reading room",
+        "library membership for students",
+        "reading hall facilities",
+        "academic resources in library",
+        "central library resources and books",
+        "library facilities for students"
+      ],
+      "responses": [
+        "The university central library houses thousands of textbooks, reference materials, national and international research journals, and digital e-resources.",
+        "Students have access to extensive reading halls, reference sections, e-journal subscriptions, and quiet study zones.",
+        "Book borrowing privileges are activated automatically with your student ID card upon academic registration."
+      ]
+    },
+    {
+      "tag": "library_hours",
+      "patterns": [
+        "library hours",
+        "what are the library timings",
+        "when does the library open",
+        "when does the library close",
+        "library opening hours",
+        "is the library open on weekends",
+        "when does the library close today",
+        "library timing during exams",
+        "what time can i visit the library",
+        "library schedule",
+        "is reading room open 24 hours",
+        "library working hours",
+        "when can i borrow books from library",
+        "weekend library timings",
+        "what time does the library close",
+        "library reading room hours"
+      ],
+      "responses": [
+        "The central library is open Monday through Saturday from 8:00 AM to 8:00 PM.",
+        "During semester examination periods, reading hall hours are extended until 11:00 PM for student convenience.",
+        "On Sundays and public holidays, the library operates on special reading-room-only hours (10:00 AM to 4:00 PM)."
+      ]
+    },
+    {
+      "tag": "placement",
+      "patterns": [
+        "placement",
+        "does the university provide placements",
+        "campus placement details",
+        "what is the placement record",
+        "which recruiters visit the college",
+        "placment details",
+        "average placement package",
+        "highest salary package",
+        "companies visiting campus for recruitment",
+        "campus recruitment statistics",
+        "job opportunities after graduation",
+        "career guidance and placement cell",
+        "placement percentage for engineering",
+        "how are the campus placements",
+        "which companies hire from here",
+        "internship and placement assistance",
+        "which companies visit for placement",
+        "what are the campus recruitment opportunities",
+        "placement packages and recruiters",
+        "which corporate recruiters recruit from this campus",
+        "corporate recruitment on campus"
+      ],
+      "responses": [
+        "The university maintains an active Training & Placement Cell that coordinates campus recruitment with leading technology, core engineering, and corporate firms.",
+        "Top recruiting companies regularly visit for campus drives, offering employment and internship opportunities across various disciplines.",
+        "Placement statistics and recruitment reports are updated annually on the university placement cell webpage."
+      ]
+    },
+    {
+      "tag": "scholarship",
+      "patterns": [
+        "scholarship",
+        "are scholarships available",
+        "how to get scholarship",
+        "is financial concession provided for students",
+        "financial aid programs",
+        "how to get scholrship",
+        "merit scholarship criteria",
+        "government scholarship schemes",
+        "fee concessions for economically backward students",
+        "scholarship application procedure",
+        "who is eligible for scholarships",
+        "scholarship for merit students",
+        "financial assistance for college",
+        "types of scholarships offered",
+        "scholarships and concessions",
+        "is scholarship provided",
+        "financial concessions for university students",
+        "how can i apply for fee concessions",
+        "fee concession eligibility and application",
+        "can economically backward students receive fee waivers",
+        "fee waivers for students"
+      ],
+      "responses": [
+        "The university supports merit-based scholarships, need-based financial concessions, and government welfare scholarship schemes for eligible candidates.",
+        "Eligible students can apply for national, state, and institutional scholarship schemes through the student welfare office.",
+        "Information regarding scholarship deadlines, eligibility criteria, and required forms is published at the start of each academic semester."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "contact",
+        "how can i contact the university",
+        "university phone number",
+        "contact details of administration",
+        "helpline number",
+        "email address for inquiry",
+        "how to reach admission office",
+        "phone number for college",
+        "contact information",
+        "university help desk",
+        "office telephone numbers",
+        "who to call for admission questions",
+        "reach customer support",
+        "administrative contact info",
+        "who to contact for admission queries",
+        "how to reach the administrative helpdesk",
+        "what is the administrative email address",
+        "university email address for queries"
+      ],
+      "responses": [
+        "You can reach the university administration and student help desk through the official contact numbers and email addresses listed on our contact page.",
+        "For admission queries, please contact the admission office helpline or write to the admissions desk during standard working hours.",
+        "Official telephone numbers and departmental email contacts are available on the university website contact directory."
+      ]
+    },
+    {
+      "tag": "website",
+      "patterns": [
+        "website",
+        "what is the university website",
+        "what is the official website",
+        "university web portal",
+        "official website link",
+        "online college portal",
+        "where is the university website",
+        "give me the university portal link",
+        "official site of college",
+        "student portal address",
+        "web link of university",
+        "official university link"
+      ],
+      "responses": [
+        "The official university portal provides online admissions, academic calendars, notifications, exam results, and departmental information.",
+        "Please visit the official university website to access the student portal, course syllabi, and administrative updates.",
+        "All verified circulars, announcements, and academic resources are published directly on the university's official web portal."
+      ]
+    },
+    {
+      "tag": "facilities",
+      "patterns": [
+        "facilities",
+        "what facilities are available on campus",
+        "campus infrastructure and amenities",
+        "what does the campus offer",
+        "auditorium and laboratory facilities",
+        "campus amenities",
+        "wifi on campus",
+        "medical center and health facilities",
+        "student facilities",
+        "infrastructure details",
+        "computing labs and modern classrooms",
+        "campus features and resources",
+        "what facilities do you offer",
+        "campus infrastructure details"
+      ],
+      "responses": [
+        "Campus facilities include state-of-the-art computer labs, specialized engineering workshops, smart classrooms, an auditorium, medical health center, and recreational areas.",
+        "The campus is fully Wi-Fi enabled and provides modern infrastructure supporting both academic and extracurricular activities.",
+        "For a full overview of campus infrastructure and departmental facilities, check the campus tour section on our website."
+      ]
+    },
+    {
+      "tag": "events",
+      "patterns": [
+        "events",
+        "what events take place in the university",
+        "annual cultural fest",
+        "technical symposium and hackathons",
+        "college festivals",
+        "sports meets and cultural events",
+        "campus activities and clubs",
+        "when is the annual festival",
+        "what extra curricular activities are there",
+        "student clubs and fests",
+        "upcoming events on campus",
+        "what fests take place",
+        "campus hackathons and annual fests"
+      ],
+      "responses": [
+        "The university hosts annual cultural festivals, technical symposiums, hackathons, sports tournaments, and student club workshops throughout the year.",
+        "Students can participate in various technical, cultural, literary, and social service clubs active across the campus.",
+        "The annual academic and event calendar is published at the beginning of each session with scheduled fest dates."
+      ]
+    },
+    {
+      "tag": "exams",
+      "patterns": [
+        "exams",
+        "when are semester exams conducted",
+        "examination schedule",
+        "exam timetable",
+        "semester exam dates",
+        "how are exams conducted",
+        "internal assessment and final exams",
+        "examination rules and grading",
+        "when do final tests happen",
+        "exam dates for university",
+        "exam circular and timetable",
+        "when are the exams",
+        "semester examination timetable and dates"
+      ],
+      "responses": [
+        "Semester examinations are held twice a year (typically in November-December for odd semesters and April-May for even semesters).",
+        "Official exam timetables and guidelines are issued by the Controller of Examinations and posted on the university student portal.",
+        "Students are evaluated through continuous internal assessments, practical lab tests, and end-semester examinations."
+      ]
+    },
+    {
+      "tag": "canteen",
+      "patterns": [
+        "canteen",
+        "does the college have a canteen",
+        "cafeteria facilities",
+        "what food is available on campus",
+        "campus dining options",
+        "is food hygienic in canteen",
+        "canteen timings and snacks",
+        "where can students eat lunch",
+        "coffee shop and cafeteria",
+        "is vegetarian food available in canteen",
+        "campus mess and food court",
+        "food options on campus",
+        "cafeteria and snack options"
+      ],
+      "responses": [
+        "Yes, the university has a spacious cafeteria offering hygienic breakfast, lunch, snacks, and beverages at subsidized student prices.",
+        "Both vegetarian and varied meal options are available throughout the day in the main food court and campus kiosks.",
+        "The canteen is open from 8:00 AM to 7:00 PM on all instructional days."
+      ]
+    },
+    {
+      "tag": "sports",
+      "patterns": [
+        "sports",
+        "what sports facilities are available",
+        "does the college have a gymnasium",
+        "playground and athletic grounds",
+        "indoor and outdoor games",
+        "sports activities in college",
+        "cricket football basketball facilities",
+        "is there a badminton court",
+        "gym facilities for students",
+        "inter college sports competitions",
+        "sports tournaments on campus",
+        "gym and athletic grounds",
+        "sports ground availability on campus",
+        "is there a gymnasium on campus",
+        "gym on campus"
+      ],
+      "responses": [
+        "The university provides comprehensive sports facilities including a cricket/football ground, basketball and volleyball courts, indoor badminton courts, table tennis, and a fitness gymnasium.",
+        "Students actively represent the university in inter-collegiate and national sports tournaments.",
+        "Sports equipment and coaching facilities are managed by the Department of Physical Education."
+      ]
+    }
+  ]
+}

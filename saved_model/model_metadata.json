@@ -1,0 +1,52 @@
+{
+  "model_name": "TF-IDF + Logistic Regression",
+  "training_date": "2026-09-01 01:43:52",
+  "dataset_hash_sha256": "d201cf0e5c59c32a289cb8568fe28edcac911a7dd77d15ee44ee37f20a3d00a1",
+  "random_seed": 42,
+  "test_size_ratio": 0.2,
+  "total_samples": 487,
+  "train_samples_count": 389,
+  "test_samples_count": 98,
+  "num_classes": 24,
+  "classes": [
+    "admission",
+    "canteen",
+    "contact",
+    "course_details",
+    "courses",
+    "creator",
+    "documents",
+    "events",
+    "exams",
+    "facilities",
+    "fees",
+    "goodbye",
+    "greeting",
+    "hostel",
+    "hostel_facilities",
+    "hours",
+    "library",
+    "library_hours",
+    "location",
+    "name",
+    "placement",
+    "scholarship",
+    "sports",
+    "website"
+  ],
+  "vocabulary_size": 1065,
+  "confidence_threshold": 0.5,
+  "parameters": {
+    "tfidf_ngram_range": [
+      1,
+      2
+    ],
+    "tfidf_sublinear_tf": true,
+    "logistic_regression_C": 10.0,
+    "logistic_regression_class_weight": "balanced"
+  },
+  "metrics": {
+    "test_accuracy": 0.8367346938775511,
+    "test_weighted_f1": 0.8340568161996733
+  }
+}
