@@ -133,7 +133,7 @@ if "messages" not in st.session_state:
         }
     ]
 
-# 5. Sidebar Layout
+# 5. Sidebar Layout: CampusMate Console
 with st.sidebar:
     st.image("https://img.icons8.com/color/96/graduation-cap.png", width=64)
     st.title("CampusMate Console")
@@ -151,22 +151,7 @@ with st.sidebar:
     chatbot.debug_mode = debug_mode
 
     st.markdown("---")
-    
-    # Model Metadata Statistics Card
-    if chatbot.metadata:
-        st.subheader("📊 Model Info")
-        st.markdown(
-            f"""
-            <div class="metric-box">
-                <b>Architecture</b>: TF-IDF + Logistic Regression<br>
-                <b>Accuracy</b>: {chatbot.metadata.get('metrics', {}).get('test_accuracy', 0.0)*100:.2f}%<br>
-                <b>Weighted F1</b>: {chatbot.metadata.get('metrics', {}).get('test_weighted_f1', 0.0)*100:.2f}%<br>
-                <b>Total Samples</b>: {chatbot.metadata.get('total_samples', 0)}<br>
-                <b>Confidence Cutoff</b>: {chatbot.confidence_threshold:.2f}
-            </div>
-            """, 
-            unsafe_allow_html=True
-        )
+
 
     # Collapsible FAQ Intents Directory
     st.subheader("📂 Supported Categories")
