@@ -15,7 +15,8 @@ from src.config import CONFIDENCE_THRESHOLD, AMBIGUITY_MARGIN
 st.set_page_config(
     page_title="CampusMate - University FAQ & Intent Assistant",
     page_icon="🎓",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
 # Dark mode styling with linear gradients and modern typography
@@ -29,16 +30,52 @@ st.markdown(
         font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     
-    /* Hide Streamlit header, top toolbar (Share, edit, github, menu), and footer */
-    #MainMenu {visibility: hidden; display: none !important;}
-    header {visibility: hidden; display: none !important;}
-    footer {visibility: hidden; display: none !important;}
-    [data-testid="stHeader"] {display: none !important;}
-    [data-testid="stToolbar"] {display: none !important;}
-    .stDeployButton {display: none !important;}
-    [data-testid="stDecoration"] {display: none !important;}
-    [data-testid="stStatusWidget"] {display: none !important;}
-    .stActionButton {display: none !important;}
+    /* Clean transparent header */
+    header[data-testid="stHeader"] {
+        background: transparent !important;
+    }
+
+    /* Hide unnecessary Streamlit default chrome (menu, deploy button, decorations, footer) */
+    #MainMenu, [data-testid="stMainMenu"] { display: none !important; }
+    footer, [data-testid="stFooter"] { display: none !important; }
+    .stDeployButton, [data-testid="stAppDeployButton"] { display: none !important; }
+    [data-testid="stDecoration"] { display: none !important; }
+
+    /* Keep Sidebar controls visible and styled nicely */
+    [data-testid="stSidebarCollapsedControl"] {
+        display: flex !important;
+        visibility: visible !important;
+    }
+
+    [data-testid="stSidebarCollapsedControl"] button,
+    [data-testid="stSidebarCollapseButton"] button {
+        background-color: rgba(30, 41, 59, 0.85) !important;
+        border: 1px solid rgba(99, 102, 241, 0.5) !important;
+        border-radius: 8px !important;
+        color: #818cf8 !important;
+        transition: all 0.2s ease-in-out !important;
+    }
+
+    [data-testid="stSidebarCollapsedControl"] button:hover,
+    [data-testid="stSidebarCollapseButton"] button:hover {
+        background-color: rgba(99, 102, 241, 0.3) !important;
+        border-color: #818cf8 !important;
+        color: #ffffff !important;
+    }
+
+    [data-testid="stSidebarCollapsedControl"] svg,
+    [data-testid="stSidebarCollapseButton"] svg {
+        fill: #818cf8 !important;
+        stroke: #818cf8 !important;
+        color: #818cf8 !important;
+    }
+
+    [data-testid="stSidebarCollapsedControl"] button:hover svg,
+    [data-testid="stSidebarCollapseButton"] button:hover svg {
+        fill: #ffffff !important;
+        stroke: #ffffff !important;
+        color: #ffffff !important;
+    }
     
     /* Background gradients */
     .stApp {
