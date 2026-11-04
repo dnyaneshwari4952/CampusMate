@@ -11,10 +11,13 @@ if str(BASE_DIR) not in sys.path:
 from src.chatbot import Chatbot
 from src.config import CONFIDENCE_THRESHOLD, AMBIGUITY_MARGIN
 
+# Define logo path
+LOGO_PATH = Path(__file__).resolve().parent / "assets" / "logo.png"
+
 # 1. Page Configuration & Custom CSS Styles
 st.set_page_config(
     page_title="CampusMate - University FAQ & Intent Assistant",
-    page_icon="🎓",
+    page_icon=str(LOGO_PATH) if LOGO_PATH.exists() else "🎓",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -172,23 +175,15 @@ if "messages" not in st.session_state:
 
 # 5. Sidebar Layout: CampusMate Console
 with st.sidebar:
-    st.image("https://img.icons8.com/color/96/graduation-cap.png", width=64)
+    if LOGO_PATH.exists():
+        st.image(str(LOGO_PATH), use_container_width=True)
+    else:
+        st.image("https://img.icons8.com/color/96/graduation-cap.png", width=64)
     st.title("CampusMate Console")
     st.caption("University FAQ & Intent Assistant")
     st.markdown('<div class="status-badge">● NLP Engine Active</div>', unsafe_allow_html=True)
     st.markdown("---")
-
-    # Developer Toggles
-    st.subheader("⚙️ Control Panel")
-    debug_mode = st.toggle(
-        "Debug Pipeline", 
-        value=False, 
-        help="Display preprocessed tokens, top predicted confidence scores, and diagnostic reasons."
-    )
-    chatbot.debug_mode = debug_mode
-
-    st.markdown("---")
-
+    debug_mode = False
 
     # Collapsible FAQ Intents Directory
     st.subheader("📂 Supported Categories")
