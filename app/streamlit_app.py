@@ -214,7 +214,8 @@ st.caption("A supervised classical NLP intent classification engine with rule-ba
 
 # 7. Render Messages from Session State
 for msg in st.session_state.messages:
-    with st.chat_message(msg["role"]):
+    avatar = str(LOGO_PATH) if msg["role"] == "assistant" and LOGO_PATH.exists() else None
+    with st.chat_message(msg["role"], avatar=avatar):
         st.markdown(msg["content"])
         
         # Overlay debug data if active
@@ -248,7 +249,8 @@ if user_query := st.chat_input("Ask a university question (e.g., What courses ar
     })
 
     # Render bot response bubble
-    with st.chat_message("assistant"):
+    bot_avatar = str(LOGO_PATH) if LOGO_PATH.exists() else None
+    with st.chat_message("assistant", avatar=bot_avatar):
         st.markdown(bot_reply)
         
         # Display debug info / confidence badge if enabled
